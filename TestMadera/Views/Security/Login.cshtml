@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Connexion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post" action="/Security/Login">
+                <h4>Entrez vos informations de connexion.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="text" name="password"  class="form-control" />
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="rememberMe">
+                            <input type="checkbox" name="rememberMe" /> 
+                            Se souvenir de moi ?
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
